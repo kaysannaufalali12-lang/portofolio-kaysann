@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+	<link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halaman Pribadi Saya</title>
+</head>
+
+<body>
+    <!-- HEADER - Bagian atas halaman -->
+    <header>
+        <h1>M.KAYSAN NAUFAL A.</h1>
+        <p>Siswa TKJ | Web Developer Pemula 👨‍💻</p>
+    </header>
+
+    <!-- NAV - Menu navigasi -->
+    <nav>
+        <h2>Menu</h2>
+        <ul>
+            <li><a href="#home">🏠 Home</a></li>
+            <li><a href="#about">👤 About</a></li>
+            <li><a href="#skills">⚡ Skills</a></li>
+            <li><a href="#contact">📞 Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- MAIN - Konten utama -->
+    <main>
+
+        <!-- SECTION 1: HOME -->
+        <section id="home">
+            <h2>Selamat Datang di Halaman Saya! 👋</h2>
+            <p>Halo, saya adalah seorang siswa SMK kelas X program TKJ.</p>
+            <p>Halaman ini adalah proyek pertama saya belajar HTML.</p>
+        </section>
+
+        <!-- SECTION 2: ABOUT -->
+        <section id="about">
+            <h2>Tentang Saya</h2>
+            
+            <article>
+                <h3>Profil</h3>
+                <img src="kaysan.JPEG" 
+                     alt="Foto Profil Saya"
+                     width="150"
+                     height="150">
+                <p><strong>Nama:</strong> M.KAYSAN NAUFAL ALI</p>
+                <p><strong>Kelas:</strong> X TJKT 2</p>
+                <p><strong>Sekolah:</strong> SMK Negeri 1 Nganjuk</p>
+                <p><strong>Asal:</strong> Nganjuk, Jawa Timur</p>
+            </article>
+
+            <article>
+                <h3>Hobi Saya</h3>
+                <ul>
+                    <li>Belajar coding</li>
+                    <li>Main game</li>
+                    <li>Membaca artikel tech</li>
+                    <li>Olahraga</li>
+                </ul>
+            </article>
+        </section>
+
+        <!-- SECTION 3: SKILLS -->
+        <section id="skills">
+            <h2>Skill Saya</h2>
+            
+            <article>
+                <h3>Web Development</h3>
+                <ul>
+                    <li>HTML5 Basics ⭐⭐⭐⭐</li>
+                    <li>CSS3 Basics ⭐⭐⭐</li>
+                    <li>JavaScript ⭐⭐</li>
+                </ul>
+            </article>
+
+            <article>
+                <h3>Tools</h3>
+                <ul>
+					<li>Notepad++</li>
+                    <li>VS Code</li>
+                    <li>Git & GitHub</li>
+                    <li>Chrome DevTools</li>
+                </ul>
+            </article>
+        </section>
+
+        <!-- ASIDE - Konten sampingan/tambahan yang berhubungan dengan profil -->
+        <aside>
+            <h2>Info Tambahan</h2>
+            <article>
+                <h3>💡 Fun Fact</h3>
+                <p>Saya bisa menghabiskan waktu berjam-jam di depan komputer hanya untuk mencari tahu kenapa kode HTML saya tidak berjalan (padahal cuma kurang tanda kurung siku!).</p>
+            </article>
+            <article>
+                <h3>💬 Quote Favorit</h3>
+                <p><em>"First, solve the problem. Then, write the code."</em> – John Johnson</p>
+            </article>
+        </aside>
+
+    </main>
+
+    <!-- SECTION 4: CONTACT -->
+    <section id="contact">
+        <h2>Hubungi Saya</h2>
+        
+        <address>
+            <p>Email: <a href="mailto:email@example.com">email@example.com</a></p>
+            <p>WhatsApp: <a href="https://wa.me/6281553724132">+62 81553724132</a></p>
+            <p>Instagram: <a href="https://instagram.com/username">@tahuxz</a></p>
+            <p>GitHub: <a href="https://github.com/username">github.com/username</a></p>
+        </address>
+
+        <h3>Kirim Pesan</h3>
+        <form>
+            <label for="nama">Nama:</label><br>
+            <input type="text" id="nama" name="nama" placeholder="Nama Anda" required><br><br>
+
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" placeholder="email@example.com" required><br><br>
+
+            <label for="pesan">Pesan:</label><br>
+            <textarea id="pesan" name="pesan" rows="4" placeholder="Tulis pesan Anda..."></textarea><br><br>
+
+            <button type="submit">Kirim</button>
+            <button type="reset">Clear</button>
+        </form>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <hr>
+        <p>&copy; 2026 kaysan. Created with HTML5 ❤️</p>
+        <nav>
+            <a href="#home">Home</a> | 
+            <a href="#about">About</a> | 
+            <a href="#skills">Skills</a> | 
+            <a href="#contact">Contact</a>
+        </nav>
+    </footer>
+
+</body>
+</html>/* =========================================================
+   1. CSS VARIABLES & TEMA WARNA
+   ========================================================= */
+:root {
+  --bg-primary: #0f172a;       /* Warna latar belakang utama */
+  --bg-secondary: #1e293b;     /* Warna latar belakang kartu/sidebar */
+  --bg-card: rgba(30, 41, 59, 0.7);
+  --accent: #38bdf8;           /* Warna aksen utama (Biru) */
+  --accent-hover: #0284c7;
+  --text-main: #f8fafc;        /* Warna teks utama */
+  --text-muted: #94a3b8;       /* Warna teks sekunder/redup */
+  --border-color: rgba(255, 255, 255, 0.1);
+  --radius: 16px;              /* Kebulatan sudut elemen */
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Reset & Gaya Dasar */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background-color: var(--bg-primary);
+  color: var(--text-main);
+  line-height: 1.6;
+}
+
+/* =========================================================
+   2. HEADER & NAVIGASI (Flexbox)
+   ========================================================= */
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 2rem;
+  background: rgba(15, 23, 42, 0.85);
+  backdrop-filter: blur(12px); /* Efek Kaca Tempa (Glassmorphism) */
+  border-bottom: 1px solid var(--border-color);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--accent);
+  letter-spacing: 0.5px;
+}
+
+.site-nav ul {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+.site-nav a {
+  color: var(--text-muted);
+  text-decoration: none;
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+.site-nav a:hover {
+  color: var(--accent);
+}
+
+/* Layout Container */
+.main-container {
+  max-width: 1100px;
+  margin: 2.5rem auto;
+  padding: 0 1.5rem;
+}
+
+/* =========================================================
+   3. HERO / AREA PROFIL DIRI (Flexbox & Grid Layout)
+   ========================================================= */
+.hero-profile {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  padding: 3rem 2rem;
+  margin-bottom: 3.5rem;
+  background: radial-gradient(circle at top left, #1e293b 0%, var(--bg-primary) 100%);
+  border-radius: var(--radius);
+  border: 1px solid var(--border-color);
+}
+
+.profile-avatar img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--accent);
+  box-shadow: 0 0 20px rgba(56, 189, 248, 0.2);
+}
+
+.profile-info {
+  flex: 1;
+}
+
+.profile-tag {
+  display: inline-block;
+  font-size: 0.85rem;
+  color: var(--accent);
+  background: rgba(56, 189, 248, 0.1);
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  margin-bottom: 0.8rem;
+  font-weight: 600;
+}
+
+.profile-info h1 {
+  font-size: 2.4rem;
+  margin-bottom: 0.3rem;
+  background: linear-gradient(to right, #f8fafc, var(--accent));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.profile-title {
+  color: var(--text-muted);
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+.profile-bio {
+  color: var(--text-muted);
+  margin-bottom: 1.5rem;
+  max-width: 650px;
+}
+
+.profile-action {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.btn-primary {
+  padding: 0.7rem 1.5rem;
+  background: var(--accent);
+  color: var(--bg-primary);
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: var(--transition);
+}
+
+.btn-primary:hover {
+  background: var(--accent-hover);
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  padding: 0.7rem 1.5rem;
+  background: transparent;
+  color: var(--text-main);
+  border: 1px solid var(--border-color);
+  font-weight: 500;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: var(--transition);
+}
+
+.btn-secondary:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+/* =========================================================
+   4. SECTION TITLE & PORTOFOLIO GRID (CSS Grid Modern)
+   ========================================================= */
+.section-title {
+  font-size: 1.6rem;
+  margin-bottom: 1.5rem;
+  border-left: 4px solid var(--accent);
+  padding-left: 0.8rem;
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 4rem;
+}
+
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  border-color: var(--accent);
+  box-shadow: 0 10px 20px rgba(56, 189, 248, 0.1);
+}
+
+.card h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.card p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  margin-bottom: 1.2rem;
+}
+
+.tag-container {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.tag {
+  font-size: 0.75rem;
+  padding: 0.2rem 0.6rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 4px;
+  color: var(--accent);
+}
+
+/* =========================================================
+   5. PORTAL INFORMASI & SIDEBAR (Layout 2 Kolom Grid)
+   ========================================================= */
+.portal-layout {
+  display: grid;
+  grid-template-columns: 2.5fr 1fr;
+  gap: 2rem;
+}
+
+.article-item {
+  background: var(--bg-secondary);
+  border-radius: var(--radius);
+  padding: 1.2rem 1.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid var(--border-color);
+}
+
+.article-item h4 {
+  font-size: 1.1rem;
+  margin-bottom: 0.4rem;
+}
+
+.article-item p {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.sidebar {
+  background: var(--bg-secondary);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  border: 1px solid var(--border-color);
+  height: fit-content;
+}
+
+.sidebar h3 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.contact-list {
+  list-style: none;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.contact-list li {
+  margin-bottom: 0.8rem;
+}
+
+.contact-list strong {
+  color: var(--text-main);
+}
+
+/* =========================================================
+   6. FOOTER & MEDIA QUERIES (RESPONSIF)
+   ========================================================= */
+.site-footer {
+  text-align: center;
+  padding: 2rem;
+  border-top: 1px solid var(--border-color);
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  margin-top: 4rem;
+}
+
+/* Responsif Layar HP/Tablet */
+@media (max-width: 768px) {
+  .hero-profile {
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem 1rem;
+  }
+
+  .profile-action {
+    justify-content: center;
+  }
+
+  .portal-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .site-header {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
